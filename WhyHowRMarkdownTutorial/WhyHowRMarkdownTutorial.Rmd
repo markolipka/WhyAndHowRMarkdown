@@ -1,0 +1,193 @@
+---
+title: "R Markdown"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# Warum R Markdown?
+
+## Was ist das überhaupt?
+
+### Markdown
+
+**Markdown** ist eine vereinfachte *Auszeichnungssprache*, also eine maschinenlesbare Sprache für die Gliederung und Formatierung von Texten (und anderen Daten).
+Mit Auszeichnungssprachen werden Eigenschaften, Zugehörigkeiten und Darstellungsformen von Abschnitten eines Textes (Zeichen, Wörtern, Absätzen) beschrieben.
+Die Beschreibung erfolgt in Textform, wobei ein erklärtes Ziel von **Markdown** ist, dass der Quellcode leicht lesbar ist. 
+
+### Ein Beispiel sagt mehr als 52 Worte
+
+#### Normaler Text, Absätze und Zeilenumbrüche:
+
+    Normaler Text wird so dargestellt wie eingegeben.
+    
+    Eine Leerzeile erzeugt einen Absatz.
+
+Normaler Text wird so dargestellt wie eingegeben.
+
+Eine Leerzeile erzeugt einen Absatz.
+
+    Zwei oder mehr Leerzeichen am Ende der Zeile  
+    erzeugen einen Zeilenumbruch.
+
+Zwei oder mehr Leerzeichen am Ende der Zeile  
+erzeugen einen Zeilenumbruch.
+
+#### Hervorhebungen
+
+    *Kursiv*, **Fett** und ***Fett kursiv***
+
+*Kursiv*, **Fett** und ***Fett kursiv***
+
+#### Aufzählungen
+
+    * Ein Punkt in einer ungeordneten Liste
+    * Ein weiterer Punkt in einer ungeordneten Liste
+        * Ein Unterpunkt, um vier Leerzeichen eingerückt
+     * Statt * funktionieren auch + oder -
+
+* Ein Punkt in einer ungeordneten Liste
+* Ein weiterer Punkt in einer ungeordneten Liste
+    * Ein Unterpunkt, um vier Leerzeichen eingerückt
+* Statt * funktionieren auch + oder -
+
+#### Überschriften
+
+Überschriften und Unterüberschriften werden durch ein oder mehrere vorangestellte "#" ausgezeichnet.
+Je mehr "#", desto tiefer die Unterüberschriften-Ebene. Dieser Text z.B, steht unter der Unterüberschrift "Überschriften", die wiefolgt erstellt wurde:
+
+    #### Überschriften
+
+#### Hyperlinks
+
+##### Webseiten
+
+    [Beschriftung des Hyperlinks](https://de.wikipedia.org/wiki/Markdown "Titel, der beim Überfahren mit der Maus angezeigt wird")
+
+[Beschriftung des Hyperlinks](https://de.wikipedia.org/wiki/Markdown "Titel, der beim Überfahren mit der Maus angezeigt wird")
+
+##### Dateien
+
+[Ein pdf](Example.pdf)
+
+[Dasselbe als docx](Example.docx)
+
+[Und nochmal als html](Example.html)
+
+##### Bilder einbetten
+
+###### aus dem Netz
+    ![ein Beispielbild](https://upload.wikimedia.org/wikipedia/commons/d/d9/Example_de.jpg "Titel, der beim Überfahren mit der Maus angezeigt wird")
+
+![ein Beispielbild](https://upload.wikimedia.org/wikipedia/commons/d/d9/Example_de.jpg "Titel, der beim Überfahren mit der Maus angezeigt wird")
+
+###### vom lokalen Datenträger
+
+![Windenergieanlagen](wind-power.png "Eine Handvoll WEA.")
+
+Soweit, so gut. Damit lassen sich Dokumente relativ einfach strukturieren und formatieren.
+
+> "Aber all das kann ich auch mit Word oder PowerPoint"
+
+wirst du jetzt erwidern.  
+Ja, stimmt, aber wir sind ja auch erst am Anfang. 
+
+
+### R Markdown
+
+Was ist nun **R Markdown**?
+
+R Markdown ist ein Dateiformat zur Erstellung dynamischer Dokumente mit R. Ein R Markdown-Dokument wird in **Markdown** geschrieben (ein einfach zu schreibendes Klartextformat, siehe [oben](#markdown) und kann Teile von eingebettetem R-Code enthalten.
+
+#### Ein simples Beispiel:
+
+    ---
+    output: html_document
+    ---
+    
+    Dies ist ein R Markdown Dokument. Markdown ist eine einfache Auszeichnungssprache um HTML, PDF, und MS Word Dokumente zu erstellen.
+    
+    Ein Klick auf die **Knit** Schaltfläche generiert ein Dokument, das die Markdown-Inhalte sowie die Ergebnisse des eingebetteten R-Codes enthält. R-Code wird folgendermaßen eingebettet:
+    
+     ```{r}
+     summary(cars)
+     ```
+    
+    Man kann auch Plots einbetten:
+    
+     ```{r, echo=FALSE}
+     plot(cars)
+     ```
+
+#### In einem daraus generierten HTML-Dokument sieht das Ergebnis dann so aus:
+
+Dies ist ein R Markdown Dokument. Markdown ist eine einfache Auszeichnungssprache um HTML, PDF, und MS Word Dokumente zu erstellen.
+
+Ein Klick auf die **Knit** Schaltfläche generiert ein Dokument, das die Markdown-Inhalte sowie die Ergebnisse des eingebetteten R-Codes enthält. R-Code wird folgendermaßen eingebettet:
+
+```{r}
+summary(cars)
+```
+    
+Man kann auch Plots einbetten:
+    
+```{r, echo=FALSE}
+plot(cars)
+```
+
+### Exercise with Code
+
+*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
+
+Now write a function that adds any two numbers and then call it:
+
+```{r add-function, exercise=TRUE, exercise.lines = 5}
+add <- function() {
+  
+}
+```
+
+## Topic 2
+
+### Exercise with Hint
+
+*Here's an exercise where the chunk is pre-evaulated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
+
+Modify the following code to limit the number of rows printed to 5:
+
+```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
+mtcars
+```
+
+```{r print-limit-hint}
+head(mtcars)
+```
+
+### Quiz
+
+*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
+
+Some questions to verify that you understand the purposes of various base and recommended R packages:
+
+```{r quiz}
+quiz(
+  question("Which package contains functions for installing other R packages?",
+    answer("base"),
+    answer("tools"),
+    answer("utils", correct = TRUE),
+    answer("codetools")
+  ),
+  question("Which of the R packages listed below are used to create plots?",
+    answer("lattice", correct = TRUE),
+    answer("tools"),
+    answer("stats"),
+    answer("grid", correct = TRUE)
+  )
+)
+```
+
