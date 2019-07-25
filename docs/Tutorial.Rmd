@@ -25,18 +25,18 @@ Die Beschreibung erfolgt in Textform, wobei ein erklärtes Ziel von **Markdown**
 #### Normaler Text, Absätze und Zeilenumbrüche:
 
     Normaler Text wird so dargestellt wie eingegeben.
+    Eine neue Zeile im Quelltext erzeugt keinen(!) Zeilenumbruch.
+    Zeilenumbrüche erzeugt man durch zwei oder mehr Leerzeichen  
+    am Ende einer Zeile.
     
     Eine Leerzeile erzeugt einen Absatz.
 
 Normaler Text wird so dargestellt wie eingegeben.
+Eine neue Zeile im Quelltext erzeugt keinen(!) Zeilenumbruch.
+Zeilenumbrüche erzeugt man durch zwei oder mehr Leerzeichen  
+am Ende einer Zeile.
 
 Eine Leerzeile erzeugt einen Absatz.
-
-    Zwei oder mehr Leerzeichen am Ende der Zeile  
-    erzeugen einen Zeilenumbruch.
-
-Zwei oder mehr Leerzeichen am Ende der Zeile  
-erzeugen einen Zeilenumbruch.
 
 #### Hervorhebungen
 
@@ -73,9 +73,15 @@ Je mehr "#", desto tiefer die Unterüberschriften-Ebene. Dieser Text z.B, steht 
 
 ##### Dateien
 
+    [Ein pdf](Example.pdf)
+
 [Ein pdf](Example.pdf)
 
+    [Dasselbe als docx](Example.docx)
+
 [Dasselbe als docx](Example.docx)
+
+    [Und nochmal als html](Example.html)
 
 [Und nochmal als html](Example.html)
 
@@ -110,9 +116,15 @@ R Markdown ist ein Dateiformat zur Erstellung dynamischer Dokumente mit R. Ein R
     output: html_document
     ---
     
-    Dies ist ein R Markdown Dokument. Markdown ist eine einfache Auszeichnungssprache um HTML, PDF, und MS Word Dokumente zu erstellen.
+    Dies ist ein R Markdown Dokument.
     
-    Ein Klick auf die **Knit** Schaltfläche generiert ein Dokument, das die Markdown-Inhalte sowie die Ergebnisse des eingebetteten R-Codes enthält. R-Code wird folgendermaßen eingebettet:
+    Markdown ist eine einfache Auszeichnungssprache
+    um HTML, PDF, und MS Word Dokumente zu erstellen.
+    
+    Ein Klick auf die **Knit** Schaltfläche generiert
+    ein Dokument, das die Markdown-Inhalte sowie die
+    Ergebnisse des eingebetteten R-Codes enthält.
+    R-Code wird folgendermaßen eingebettet:
     
      ```{r}
      summary(cars)

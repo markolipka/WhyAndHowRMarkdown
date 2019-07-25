@@ -1,39 +1,6 @@
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="pandoc" />
-
-
-
-<meta name="progressive" content="false" />
-<meta name="allow-skip" content="false" />
-
-<title>R Markdown</title>
-
-
-<!-- highlightjs -->
-<style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
-<script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
-}
-</script>
-
-
-
-</head>
+---
+layout: default
+---
 
 <body>
 
@@ -57,14 +24,14 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <div id="section-normaler-text-absatze-und-zeilenumbruche" class="section level4">
 <h4>Normaler Text, Absätze und Zeilenumbrüche:</h4>
 <pre><code>Normaler Text wird so dargestellt wie eingegeben.
+Eine neue Zeile im Quelltext erzeugt keinen(!) Zeilenumbruch.
+Zeilenumbrüche erzeugt man durch zwei oder mehr Leerzeichen  
+am Ende einer Zeile.
 
 Eine Leerzeile erzeugt einen Absatz.</code></pre>
-<p>Normaler Text wird so dargestellt wie eingegeben.</p>
+<p>Normaler Text wird so dargestellt wie eingegeben. Eine neue Zeile im Quelltext erzeugt keinen(!) Zeilenumbruch. Zeilenumbrüche erzeugt man durch zwei oder mehr Leerzeichen<br />
+am Ende einer Zeile.</p>
 <p>Eine Leerzeile erzeugt einen Absatz.</p>
-<pre><code>Zwei oder mehr Leerzeichen am Ende der Zeile  
-erzeugen einen Zeilenumbruch.</code></pre>
-<p>Zwei oder mehr Leerzeichen am Ende der Zeile<br />
-erzeugen einen Zeilenumbruch.</p>
 </div>
 <div id="section-hervorhebungen" class="section level4">
 <h4>Hervorhebungen</h4>
@@ -100,8 +67,11 @@ erzeugen einen Zeilenumbruch.</p>
 </div>
 <div id="section-dateien" class="section level5">
 <h5>Dateien</h5>
+<pre><code>[Ein pdf](Example.pdf)</code></pre>
 <p><a href="Example.pdf">Ein pdf</a></p>
+<pre><code>[Dasselbe als docx](Example.docx)</code></pre>
 <p><a href="Example.docx">Dasselbe als docx</a></p>
+<pre><code>[Und nochmal als html](Example.html)</code></pre>
 <p><a href="Example.html">Und nochmal als html</a></p>
 </div>
 <div id="section-bilder-einbetten" class="section level5">
@@ -140,9 +110,15 @@ Ja, stimmt, aber wir sind ja auch erst am Anfang.</p>
 output: html_document
 ---
 
-Dies ist ein R Markdown Dokument. Markdown ist eine einfache Auszeichnungssprache um HTML, PDF, und MS Word Dokumente zu erstellen.
+Dies ist ein R Markdown Dokument.
 
-Ein Klick auf die **Knit** Schaltfläche generiert ein Dokument, das die Markdown-Inhalte sowie die Ergebnisse des eingebetteten R-Codes enthält. R-Code wird folgendermaßen eingebettet:
+Markdown ist eine einfache Auszeichnungssprache
+um HTML, PDF, und MS Word Dokumente zu erstellen.
+
+Ein Klick auf die **Knit** Schaltfläche generiert
+ein Dokument, das die Markdown-Inhalte sowie die
+Ergebnisse des eingebetteten R-Codes enthält.
+R-Code wird folgendermaßen eingebettet:
 
  ```{r}
  summary(cars)
@@ -238,5 +214,3 @@ $(document).ready(function () {
 </script>
 
 </body>
-
-</html>
