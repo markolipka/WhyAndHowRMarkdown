@@ -25,8 +25,8 @@ Die Beschreibung erfolgt in Textform, wobei ein erklärtes Ziel von **Markdown**
 #### Normaler Text, Absätze und Zeilenumbrüche:
 
     Normaler Text wird so dargestellt wie eingegeben.
-    Eine neue Zeile im Quelltext erzeugt keinen(!) Zeilenumbruch.
-    Zeilenumbrüche erzeugt man durch zwei oder mehr Leerzeichen  
+    Eine neue Zeile im Quelltext erzeugt keinen(!) manuellen Zeilenumbruch.
+    Zeilenumbrüche erzwingt man stattdessen durch zwei oder mehr Leerzeichen  
     am Ende einer Zeile.
     
     Eine Leerzeile erzeugt einen Absatz.
@@ -94,7 +94,11 @@ Je mehr "#", desto tiefer die Unterüberschriften-Ebene. Dieser Text z.B, steht 
 
 ###### vom lokalen Datenträger
 
+    ![Windenergieanlagen](wind-power.png "Eine Handvoll WEA.")
+
 ![Windenergieanlagen](wind-power.png "Eine Handvoll WEA.")
+
+--------
 
 Soweit, so gut. Damit lassen sich Dokumente relativ einfach strukturieren und formatieren.
 
