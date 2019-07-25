@@ -24,19 +24,21 @@ Die Beschreibung erfolgt in Textform, wobei ein erklärtes Ziel von **Markdown**
 
 #### Normaler Text, Absätze und Zeilenumbrüche:
 
-    Normaler Text wird so dargestellt wie eingegeben.
+    Normaler Text wird so dargestellt wie eingegeben und automatisch umgebrochen, falls nötig.
     Eine neue Zeile im Quelltext erzeugt keinen(!) manuellen Zeilenumbruch.
-    Zeilenumbrüche erzwingt man stattdessen durch zwei oder mehr Leerzeichen  
+    Zeilenumbrüche erzwingt man stattdessen durch zwei oder mehr
+    Leerzeichen, wie hier -->      
     am Ende einer Zeile.
     
-    Eine Leerzeile erzeugt einen Absatz.
+    Eine Leerzeile erzeugt immer einen neuen Absatz.
 
-Normaler Text wird so dargestellt wie eingegeben.
-Eine neue Zeile im Quelltext erzeugt keinen(!) Zeilenumbruch.
-Zeilenumbrüche erzeugt man durch zwei oder mehr Leerzeichen  
+Normaler Text wird so dargestellt wie eingegeben und automatisch umgebrochen, falls nötig.
+Eine neue Zeile im Quelltext erzeugt keinen(!) manuellen Zeilenumbruch.
+Zeilenumbrüche erzwingt man stattdessen durch zwei oder mehr
+Leerzeichen, wie hier -->      
 am Ende einer Zeile.
 
-Eine Leerzeile erzeugt einen Absatz.
+Eine Leerzeile erzeugt immer einen neuen Absatz.
 
 #### Hervorhebungen
 
@@ -50,11 +52,16 @@ Eine Leerzeile erzeugt einen Absatz.
     * Ein weiterer Punkt in einer ungeordneten Liste
         * Ein Unterpunkt, um vier Leerzeichen eingerückt
      * Statt * funktionieren auch + oder -
+        + das vorangestellte Zeichen spielt dabei keine Rolle
+        - lediglich die Einrückung zählt
+
 
 * Ein Punkt in einer ungeordneten Liste
 * Ein weiterer Punkt in einer ungeordneten Liste
     * Ein Unterpunkt, um vier Leerzeichen eingerückt
 * Statt * funktionieren auch + oder -
+    + das vorangestellte Zeichen spielt dabei keine Rolle
+    - lediglich die Einrückung zählt
 
 #### Überschriften
 

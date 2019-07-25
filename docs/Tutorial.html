@@ -56,15 +56,16 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <h3>Ein Beispiel sagt mehr als 52 Worte</h3>
 <div id="section-normaler-text-absatze-und-zeilenumbruche" class="section level4">
 <h4>Normaler Text, Absätze und Zeilenumbrüche:</h4>
-<pre><code>Normaler Text wird so dargestellt wie eingegeben.
+<pre><code>Normaler Text wird so dargestellt wie eingegeben und automatisch umgebrochen, falls nötig.
 Eine neue Zeile im Quelltext erzeugt keinen(!) manuellen Zeilenumbruch.
-Zeilenumbrüche erzwingt man stattdessen durch zwei oder mehr Leerzeichen  
+Zeilenumbrüche erzwingt man stattdessen durch zwei oder mehr
+Leerzeichen, wie hier --&gt;      
 am Ende einer Zeile.
 
-Eine Leerzeile erzeugt einen Absatz.</code></pre>
-<p>Normaler Text wird so dargestellt wie eingegeben. Eine neue Zeile im Quelltext erzeugt keinen(!) Zeilenumbruch. Zeilenumbrüche erzeugt man durch zwei oder mehr Leerzeichen<br />
+Eine Leerzeile erzeugt immer einen neuen Absatz.</code></pre>
+<p>Normaler Text wird so dargestellt wie eingegeben und automatisch umgebrochen, falls nötig. Eine neue Zeile im Quelltext erzeugt keinen(!) manuellen Zeilenumbruch. Zeilenumbrüche erzwingt man stattdessen durch zwei oder mehr Leerzeichen, wie hier –&gt;<br />
 am Ende einer Zeile.</p>
-<p>Eine Leerzeile erzeugt einen Absatz.</p>
+<p>Eine Leerzeile erzeugt immer einen neuen Absatz.</p>
 </div>
 <div id="section-hervorhebungen" class="section level4">
 <h4>Hervorhebungen</h4>
@@ -76,14 +77,20 @@ am Ende einer Zeile.</p>
 <pre><code>* Ein Punkt in einer ungeordneten Liste
 * Ein weiterer Punkt in einer ungeordneten Liste
     * Ein Unterpunkt, um vier Leerzeichen eingerückt
- * Statt * funktionieren auch + oder -</code></pre>
+ * Statt * funktionieren auch + oder -
+    + das vorangestellte Zeichen spielt dabei keine Rolle
+    - lediglich die Einrückung zählt</code></pre>
 <ul>
 <li>Ein Punkt in einer ungeordneten Liste</li>
 <li>Ein weiterer Punkt in einer ungeordneten Liste
 <ul>
 <li>Ein Unterpunkt, um vier Leerzeichen eingerückt</li>
 </ul></li>
-<li>Statt * funktionieren auch + oder -</li>
+<li>Statt * funktionieren auch + oder -
+<ul>
+<li>das vorangestellte Zeichen spielt dabei keine Rolle</li>
+<li>lediglich die Einrückung zählt</li>
+</ul></li>
 </ul>
 </div>
 <div id="section-uberschriften" class="section level4">
