@@ -1,0 +1,22 @@
+---
+title: "Ein Beispiel"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
+
+Dies ist ein vollständiges -- wenn auch simples -- R Markdown Dokument.
+
+Es enthält R Code:
+
+```{r}
+ hundert_zufallszahlen <- rnorm(100)
+ hundert_zufallszahlen
+```
+
+Man kann auch Plots einbetten:
+
+```{r, echo=FALSE}
+ plot(hundert_zufallszahlen)
+```

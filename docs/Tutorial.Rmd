@@ -12,15 +12,60 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Warum R Markdown?
 
-## Was ist das überhaupt?
+## Was kann das?
 
-### Markdown
+In aller Kürze:
+Folgender Code genügt, ein html-Dokument mit eingebettetem R-Code zu generieren:
+
+    ---
+    title: Ein Beispiel
+    output: html_document
+    ---
+    
+    Dies ist ein vollständiges -- wenn auch simples -- R Markdown Dokument.
+    
+    Es enthält R Code:
+    
+     ```{r}
+     hundert_zufallszahlen <- rnorm(100)
+     hundert_zufallszahlen
+     ```
+    
+    Man kann auch Plots einbetten:
+    
+     ```{r, echo=FALSE}
+     plot(hundert_zufallszahlen)
+     ```
+
+Das Ergebnis ist [eine html-Seite](simple.html), wie sie jeder Web-Browser öffnen kann, ob sie nun auf deiner Festplatte oder auf einem Webserver liegt. HTML ist ein wahnsinnig vielseitiges Format und kann beinahe jeden erdenklichen Inhalt haben.
+
+Eine winzige Änderung in der Zeile 
+
+    output: html_document
+
+ganz oben zu
+
+    output: pdf_document
+
+oder zu
+
+    output: html_document
+
+bewirkt, dass die Ausgabe stattdessen als statisches [pdf-](simple.pdf) oder [Word-Dokument](simple.docx) erfolgt. 
+
+Es gibt noch eine ganze Reihe weiterer interessanter Ausgabe-Formate (z.B. dieses Tutorial), aber auch weniger interessante (wie PowerPoint).
+
+... und was die Inhalte angeht, sind der Fantasie beinahe keine Grenzen gesetzt...
+
+Neugierig geworden?
+
+## Markdown --- Was ist das überhaupt?
 
 **Markdown** ist eine vereinfachte *Auszeichnungssprache*, also eine maschinenlesbare Sprache für die Gliederung und Formatierung von Texten (und anderen Daten).
-Mit Auszeichnungssprachen werden Eigenschaften, Zugehörigkeiten und Darstellungsformen von Abschnitten eines Textes (Zeichen, Wörtern, Absätzen) beschrieben.
-Die Beschreibung erfolgt in Textform, wobei ein erklärtes Ziel von **Markdown** ist, dass der Quellcode leicht lesbar ist. 
+Mit *Auszeichnungssprachen* werden Eigenschaften und Darstellungsformen von Textabschnitten (Zeichen, Wörtern, Absätzen) beschrieben.
+Die Beschreibung erfolgt dabei in Textform, wobei ein erklärtes Ziel von **Markdown** ist, dass bereits der Quellcode leicht lesbar ist. 
 
-### Ein Beispiel sagt mehr als 52 Worte
+### Ein Beispiel sagt mehr als 51 Worte
 
 #### Normaler Text, Absätze und Zeilenumbrüche:
 
@@ -115,7 +160,7 @@ wirst du jetzt erwidern.
 Ja, stimmt, aber wir sind ja auch erst am Anfang. 
 
 
-### R Markdown
+## R Markdown
 
 Was ist nun **R Markdown**?
 
