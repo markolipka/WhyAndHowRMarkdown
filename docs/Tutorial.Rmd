@@ -53,9 +53,9 @@ oder zu
 
 bewirkt, dass die Ausgabe stattdessen als statisches [pdf-](simple.pdf) oder [Word-Dokument](simple.docx) erfolgt. 
 
-Es gibt noch eine ganze Reihe weiterer interessanter Ausgabe-Formate (z.B. interaktive Tutorials wie [dieses](195.201.24.35:3838/RasGIStutorial_german/)), aber auch weniger interessante (wie PowerPoint).
+Es gibt noch eine ganze Reihe weiterer interessanter Ausgabe-Formate (z.B. interaktive Tutorials wie [dieses](http://195.201.24.35:3838/RasGIStutorial_german/)), aber auch weniger interessante (wie PowerPoint).
 
-... und was die Inhalte angeht, sind der Fantasie beinahe keine Grenzen gesetzt...
+... und was die Inhalte angeht, sind der Fantasie beinahe keine Grenzen gesetzt. 
 
 Neugierig geworden?
 
