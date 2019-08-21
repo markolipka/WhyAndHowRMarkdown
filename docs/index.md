@@ -263,7 +263,7 @@ R-Code wird folgendermaßen eingebettet:
 
 Man kann auch Plots einbetten:
 
-![](Tutorial_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](index_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 Der `cars` Datensatz ist ein in R integrierter Test-Datensatz. Darin
 sind beispielhaft Meta-Daten verschiedener [Autos (das ist ein
