@@ -218,7 +218,7 @@ Dieser Code wird bei der Generierung des Dokuments ausgeführt und sein Ergebnis
     Darin sind beispielhaft Meta-Daten verschiedener
     [Autos (das ist ein Link)](https://de.wikipedia.org/wiki/Automobil) gelistet.
     
-    ![So sehen Autos aus](https://de.wikipedia.org/wiki/Datei:Auto_scrapyard_1.jpg)
+    ![So sehen Autos aus](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Auto_scrapyard_1.jpg/800px-Auto_scrapyard_1.jpg)
 
 #### In einem daraus generierten HTML-Dokument sieht das Ergebnis dann so aus:
 
@@ -265,7 +265,7 @@ R integrierter Test-Datensatz.
 Darin sind beispielhaft Meta-Daten verschiedener
 [Autos (das ist ein Link)](https://de.wikipedia.org/wiki/Automobil) gelistet.
 
-![So sehen Autos aus](https://de.wikipedia.org/wiki/Datei:Auto_scrapyard_1.jpg)
+![So sehen Autos aus](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Auto_scrapyard_1.jpg/800px-Auto_scrapyard_1.jpg)
 
 -------------
 
