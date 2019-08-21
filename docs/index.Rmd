@@ -1,5 +1,5 @@
 ---
-title: "R Markdown"
+title: "R Markdown in aller Kürze"
 output: html_document
 ---
 
@@ -14,7 +14,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Was kann das?
 
-In aller Kürze:
 Folgende wenige Zeilen genügen, ein html-Dokument mit eingebettetem R-Code zu generieren:
 
     ---
@@ -214,8 +213,9 @@ Dieser Code wird bei der Generierung des Dokuments ausgeführt und sein Ergebnis
      plot(cars)
      ```
     
-    Der `cars` Datensatz ist (und ich erwähne das nur, um noch Links und Bilder unter zu bringen) ein in R integrierter
-    Test-Datensatz.
+    Der `cars` Datensatz ist (und ich erwähne das nur,
+    um noch Links und Bilder unter zu bringen) ein in
+    R integrierter Test-Datensatz.
     Darin sind beispielhaft Meta-Daten verschiedener
     [Autos (das ist ein Link)](https://de.wikipedia.org/wiki/Automobil) gelistet.
     
@@ -260,12 +260,13 @@ Man kann auch Plots einbetten:
  plot(cars)
 ```
 
-Der `cars` Datensatz ist (und ich erwähne das nur, um noch Links und Bilder unter zu bringen) ein in R integrierter
-Test-Datensatz.
+Der `cars` Datensatz ist (und ich erwähne das nur,
+um noch Links und Bilder unter zu bringen) ein in
+R integrierter Test-Datensatz.
 Darin sind beispielhaft Meta-Daten verschiedener
 [Autos (das ist ein Link)](https://de.wikipedia.org/wiki/Automobil) gelistet.
 
-![So sehen Autos aus](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Auto_scrapyard_1.jpg/800px-Auto_scrapyard_1.jpg)
+![So sehen Autos aus](https://de.wikipedia.org/wiki/Datei:Auto_scrapyard_1.jpg)
 
 -------------
 
