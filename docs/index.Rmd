@@ -10,28 +10,24 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Warum R Markdown?
 
+**R Markdown** ist eine Kombination aus der wunderbaren Programmiersprache **R** und der beliebten -- weil so simplen -- Auszeichnungsprache **Markdown**.
+
 ## Was kann das?
 
 In aller Kürze:
-Folgender Code genügt, ein html-Dokument mit eingebettetem R-Code zu generieren:
+Folgende wenige Zeilen genügen, ein html-Dokument mit eingebettetem R-Code zu generieren:
 
     ---
     title: Ein Beispiel
     output: html_document
     ---
     
-    Dies ist ein vollständiges -- wenn auch simples -- R Markdown Dokument.
+    Dies ist ein vollständiges -- wenn auch simples -- **R Markdown** Dokument.
     
-    Es enthält R Code:
+    Es enthält **R** Code:
     
      ```{r}
      hundert_zufallszahlen <- rnorm(100)
-     hundert_zufallszahlen
-     ```
-    
-    Man kann auch Plots einbetten:
-    
-     ```{r, echo=FALSE}
      plot(hundert_zufallszahlen)
      ```
 
@@ -60,26 +56,25 @@ Neugierig geworden?
 ## Markdown --- Was ist das überhaupt? {#markdown}
 
 **Markdown** ist eine vereinfachte *Auszeichnungssprache*, also eine maschinenlesbare Sprache für die Gliederung und Formatierung von Texten (und anderen Daten).
-Mit *Auszeichnungssprachen* werden Eigenschaften und Darstellungsformen von Textabschnitten (Zeichen, Wörtern, Absätzen) beschrieben.
+Mit *Auszeichnungssprachen* wird beschrieben, wie Textabschnitte (Zeichen, Wörter, Absätze) dargestellt werden sollen, z.B., ob es sich um eine Überschrift handelt, einen Link oder eine Fußnote.
 Die Beschreibung erfolgt dabei in Textform, wobei ein erklärtes Ziel von **Markdown** ist, dass bereits der Quellcode leicht lesbar ist. 
+Andere, deutlich weniger simple Auszeichnungssprachen sind z.B. HTML oder LaTeX.
 
-### Ein Beispiel sagt mehr als 51 Worte
+### Ein Beispiel sagt mehr als 76 Worte
 
-#### Normaler Text, Absätze und Zeilenumbrüche:
+#### Normaler Text und Absätze:
 
-    Normaler Text wird so dargestellt wie eingegeben und automatisch umgebrochen, falls nötig.
-    Eine neue Zeile im Quelltext erzeugt keinen(!) manuellen Zeilenumbruch.
-    Zeilenumbrüche erzwingt man stattdessen durch zwei oder mehr
-    Leerzeichen, wie hier -->      
-    am Ende einer Zeile.
+    Normaler Text wird so dargestellt wie eingegeben und
+    automatisch umgebrochen, falls nötig.
+    Eine neue Zeile im Quelltext erzeugt dabei keinen(!)
+    Zeilenumbruch.
     
     Eine Leerzeile erzeugt immer einen neuen Absatz.
 
-Normaler Text wird so dargestellt wie eingegeben und automatisch umgebrochen, falls nötig.
-Eine neue Zeile im Quelltext erzeugt keinen(!) manuellen Zeilenumbruch.
-Zeilenumbrüche erzwingt man stattdessen durch zwei oder mehr
-Leerzeichen, wie hier -->      
-am Ende einer Zeile.
+Normaler Text wird so dargestellt wie eingegeben und
+automatisch umgebrochen, falls nötig.
+Eine neue Zeile im Quelltext erzeugt dabei keinen(!)
+Zeilenumbruch.
 
 Eine Leerzeile erzeugt immer einen neuen Absatz.
 
@@ -115,27 +110,35 @@ Je mehr "#", desto tiefer die Unterüberschriften-Ebene. Dieser Text z.B, steht 
 
 #### Hyperlinks
 
+Links folgen generell dem einfachen Schema:
+    
+    [Platzhalter](Pfad/zum/Ziel)
+
 ##### Webseiten
 
-    [Beschriftung des Hyperlinks](https://de.wikipedia.org/wiki/Markdown "Titel, der beim Überfahren mit der Maus angezeigt wird")
+    [Beschriftung](https://de.wikipedia.org/wiki/Markdown "Titel, der beim Überfahren mit der Maus angezeigt wird")
 
-[Beschriftung des Hyperlinks](https://de.wikipedia.org/wiki/Markdown "Titel, der beim Überfahren mit der Maus angezeigt wird")
+[Beschriftung](https://de.wikipedia.org/wiki/Markdown "Titel, der beim Überfahren mit der Maus angezeigt wird")
 
 ##### Dateien
 
-    [Ein pdf](Example.pdf)
+    [Ein pdf](simple.pdf)
 
-[Ein pdf](Example.pdf)
+[Ein pdf](simple.pdf)
 
-    [Dasselbe als docx](Example.docx)
+    [Dasselbe als docx](simple.docx)
 
-[Dasselbe als docx](Example.docx)
+[Dasselbe als docx](simple.docx)
 
-    [Und nochmal als html](Example.html)
+    [Und nochmal als html](simple.html)
 
-[Und nochmal als html](Example.html)
+[Und nochmal als html](simple.html)
 
 ##### Bilder einbetten
+
+Das Einbetten von Bildern erfolgt durch ein Voranstellen eines "!" vor das Link-Schema:
+
+    ![Platzhalter](Pfad/zum/Bild)
 
 ###### aus dem Netz
     ![ein Beispielbild](https://upload.wikimedia.org/wikipedia/commons/d/d9/Example_de.jpg "Titel, der beim Überfahren mit der Maus angezeigt wird")
@@ -150,7 +153,7 @@ Je mehr "#", desto tiefer die Unterüberschriften-Ebene. Dieser Text z.B, steht 
 
 --------
 
-Soweit, so gut. Damit lassen sich Dokumente relativ einfach strukturieren und formatieren.
+Soweit, so gut. Das ist schon fast alles, was man wissen muss, um mit Markdown Dokumente zu strukturieren und formatieren.
 
 > "Aber all das kann ich auch mit Word oder PowerPoint"
 
@@ -162,7 +165,13 @@ Ja, stimmt, aber wir sind ja auch erst am Anfang.
 
 Was ist nun **R Markdown**?
 
-R Markdown ist ein Dateiformat zur Erstellung dynamischer Dokumente mit R. Ein R Markdown-Dokument wird in **Markdown** geschrieben (ein einfach zu schreibendes Klartextformat, siehe [oben](#markdown)) und kann Teile von eingebettetem R-Code enthalten.
+**R Markdown** ist ein Dateiformat zur Erstellung (dynamischer) Dokumente mit *eingebettetem R-Code*.
+Aus ein und demselben Quelltext kann eine Vielzahl verschiedener Ausgabeformate generiert werde, darunter html, pdf und docx.
+Ein **R Markdown-Dokument** wird in **Markdown** geschrieben (siehe [oben](#markdown)) und kann sogenannte *Code-Chunks* enthalten.
+*Code-Chunks* sind Abschnitte im Dokument, die R-Code enthalten.
+Dieser Code wird bei der Generierung des Dokuments ausgeführt und sein Ergebnis (einzelne Werte, Tabellen, Plots, Karten, ...) an der entsprechenden Stelle im Dokument eingefügt.
+
+**R Markdown** verbindet damit die Macht und Vielseitigkeit der Programmiersprache **R** mit der Möglichkeit einer ansprechenden Präsentation in gängigen Dokument-Formaten.
 
 #### Ein Beispiel mit einigen wichtigen Inhalten:
 
@@ -205,7 +214,7 @@ R Markdown ist ein Dateiformat zur Erstellung dynamischer Dokumente mit R. Ein R
      plot(cars)
      ```
     
-    Der `cars` Datensatz ist ein in R integrierter
+    Der `cars` Datensatz ist (und ich erwähne das nur, um noch Links und Bilder unter zu bringen) ein in R integrierter
     Test-Datensatz.
     Darin sind beispielhaft Meta-Daten verschiedener
     [Autos (das ist ein Link)](https://de.wikipedia.org/wiki/Automobil) gelistet.
@@ -251,7 +260,7 @@ Man kann auch Plots einbetten:
  plot(cars)
 ```
 
-Der `cars` Datensatz ist ein in R integrierter
+Der `cars` Datensatz ist (und ich erwähne das nur, um noch Links und Bilder unter zu bringen) ein in R integrierter
 Test-Datensatz.
 Darin sind beispielhaft Meta-Daten verschiedener
 [Autos (das ist ein Link)](https://de.wikipedia.org/wiki/Automobil) gelistet.
@@ -262,6 +271,7 @@ Darin sind beispielhaft Meta-Daten verschiedener
 
 # Lust auf mehr?
 
-Hier gehts zum interaktiven Tutorial: ["Einführung in R und R als GIS"](http://195.201.24.35:3838/RasGIStutorial_german/)
+Das ganze macht natürlich erst richtig Laune, wenn man ein wenig **R** kann.
+Hier geht's zum interaktiven Tutorial: ["Einführung in R und R als GIS"](http://195.201.24.35:3838/RasGIStutorial_german/)
 
 Feedback gern an [mich](mailto:marko.lipka@posteo.de)
