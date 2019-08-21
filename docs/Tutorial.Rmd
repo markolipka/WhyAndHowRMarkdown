@@ -1,11 +1,8 @@
 ---
 title: "R Markdown"
-output: learnr::tutorial
-runtime: shiny_prerendered
 ---
 
 ```{r setup, include=FALSE}
-library(learnr)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
@@ -59,7 +56,7 @@ Es gibt noch eine ganze Reihe weiterer interessanter Ausgabe-Formate (z.B. inter
 
 Neugierig geworden?
 
-## Markdown --- Was ist das überhaupt?
+## Markdown --- Was ist das überhaupt? {#markdown}
 
 **Markdown** ist eine vereinfachte *Auszeichnungssprache*, also eine maschinenlesbare Sprache für die Gliederung und Formatierung von Texten (und anderen Daten).
 Mit *Auszeichnungssprachen* werden Eigenschaften und Darstellungsformen von Textabschnitten (Zeichen, Wörtern, Absätzen) beschrieben.
@@ -164,22 +161,37 @@ Ja, stimmt, aber wir sind ja auch erst am Anfang.
 
 Was ist nun **R Markdown**?
 
-R Markdown ist ein Dateiformat zur Erstellung dynamischer Dokumente mit R. Ein R Markdown-Dokument wird in **Markdown** geschrieben (ein einfach zu schreibendes Klartextformat, siehe [oben](#markdown) und kann Teile von eingebettetem R-Code enthalten.
+R Markdown ist ein Dateiformat zur Erstellung dynamischer Dokumente mit R. Ein R Markdown-Dokument wird in **Markdown** geschrieben (ein einfach zu schreibendes Klartextformat, siehe [oben](#markdown)) und kann Teile von eingebettetem R-Code enthalten.
 
-#### Ein simples Beispiel:
+#### Ein Beispiel mit einigen wichtigen Inhalten:
 
     ---
     output: html_document
     ---
     
-    Dies ist ein R Markdown Dokument.
+    # Überschrift (oberste Ebene)
     
-    Markdown ist eine einfache Auszeichnungssprache
-    um HTML, PDF, und MS Word Dokumente zu erstellen.
+    ## Unterüberschrift
+    
+    Dies ist ein **R Markdown** Dokument.
+    
+    ## weitere Unter-Überschrift
+    
+    Markdown ist eine einfache *Auszeichnungssprache*
+    um 
+    
+    - HTML, 
+    - PDF, und 
+    - MS Word Dokumente 
+    
+    zu erstellen.
+    
+    ### Uner-unter-Überschrift
     
     Ein Klick auf die **Knit** Schaltfläche generiert
     ein Dokument, das die Markdown-Inhalte sowie die
     Ergebnisse des eingebetteten R-Codes enthält.
+    
     R-Code wird folgendermaßen eingebettet:
     
      ```{r}
@@ -191,20 +203,64 @@ R Markdown ist ein Dateiformat zur Erstellung dynamischer Dokumente mit R. Ein R
      ```{r, echo=FALSE}
      plot(cars)
      ```
+    
+    Der `cars` Datensatz ist ein in R integrierter
+    Test-Datensatz.
+    Darin sind beispielhaft Meta-Daten verschiedener
+    [Autos (das ist ein Link)](https://de.wikipedia.org/wiki/Automobil) gelistet.
+    
+    ![So sehen Autos aus](https://de.wikipedia.org/wiki/Datei:Auto_scrapyard_1.jpg)
 
 #### In einem daraus generierten HTML-Dokument sieht das Ergebnis dann so aus:
 
-Dies ist ein R Markdown Dokument. Markdown ist eine einfache Auszeichnungssprache um HTML, PDF, und MS Word Dokumente zu erstellen.
+    
 
-Ein Klick auf die **Knit** Schaltfläche generiert ein Dokument, das die Markdown-Inhalte sowie die Ergebnisse des eingebetteten R-Codes enthält. R-Code wird folgendermaßen eingebettet:
+# Überschrift (oberste Ebene)
+
+## Unterüberschrift
+
+Dies ist ein **R Markdown** Dokument.
+
+## weitere Unter-Überschrift
+
+Markdown ist eine einfache *Auszeichnungssprache*
+um 
+
+- HTML, 
+- PDF, und 
+- MS Word Dokumente 
+
+zu erstellen.
+
+### Uner-unter-Überschrift
+
+Ein Klick auf die **Knit** Schaltfläche generiert
+ein Dokument, das die Markdown-Inhalte sowie die
+Ergebnisse des eingebetteten R-Codes enthält.
+
+R-Code wird folgendermaßen eingebettet:
 
 ```{r}
-summary(cars)
-```
-    
-Man kann auch Plots einbetten:
-    
-```{r, echo=FALSE}
-plot(cars)
+ summary(cars)
 ```
 
+Man kann auch Plots einbetten:
+
+```{r, echo=FALSE}
+ plot(cars)
+```
+
+Der `cars` Datensatz ist ein in R integrierter
+Test-Datensatz.
+Darin sind beispielhaft Meta-Daten verschiedener
+[Autos (das ist ein Link)](https://de.wikipedia.org/wiki/Automobil) gelistet.
+
+![So sehen Autos aus](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Auto_scrapyard_1.jpg/800px-Auto_scrapyard_1.jpg)
+
+-------------
+
+# Lust auf mehr?
+
+Hier gehts zum interaktiven Tutorial: ["Einführung in R und R als GIS"](http://195.201.24.35:3838/RasGIStutorial_german/)
+
+Feedback gern an [mich](mailto:marko.lipka@posteo.de)
